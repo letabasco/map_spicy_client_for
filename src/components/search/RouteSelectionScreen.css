@@ -1,0 +1,225 @@
+.route-selection-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.route-header {
+  background: #597BEB;
+  padding: 8px 16px 16px 16px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.location-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.location-icon {
+  font-size: 16px;
+}
+
+.location-input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 14px;
+  outline: none;
+  padding: 4px 0;
+}
+
+.location-input::placeholder {
+  color: #999;
+}
+
+.transport-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.transport-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.transport-tab.active {
+  border-bottom: 2px solid #5347AA;
+  color: #5347AA;
+}
+
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.tab-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.map-container {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: calc(100vh - 180px);
+  background: #f8f8f8;
+}
+
+.start-marker {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.destination-marker {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.input-row.clickable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.input-row.clickable:hover {
+  background-color: white;
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 15px 10px;
+  background: white;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 12px;
+}
+
+.panel-content::-webkit-scrollbar {
+  display: none;
+}
+
+.panel-content > div {
+  flex: 0 0 auto;
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.route-info-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*background: white; */
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.widget-scroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0;
+}
+
+.widget-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.route-info-widget {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #A7CCEB;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  min-width: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.route-info-widget:last-child {
+  margin-right: 0;
+}
+
+.follow-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4285f4;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.follow-button:hover {
+  background-color: #357ae8;
+} 
